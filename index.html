@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Saniya's Wiki</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="app" class="container">
+    <h1>Saniya's Wiki</h1>
+    <nav>
+      <button id="homeBtn"><i class="fas fa-home"></i> Home</button>
+      <button id="createBtn"><i class="fas fa-plus"></i> Create New Page</button>
+    </nav>
+    <div id="content" class="card">
+      <h2 id="pageTitle"></h2>
+      <div id="creatorInfo"></div>
+      <div id="pageContent"></div>
+      <div id="pageAuthor"></div>
+      <div class="content-actions">
+        <button id="editBtn"><i class="fas fa-edit"></i> Edit Page</button>
+        <button id="shareBtn"><i class="fas fa-share-alt"></i> Share Page</button>
+      </div>
+    </div>
+    <div id="editor" class="card hidden">
+      <input id="titleInput" placeholder="Page Title" required>
+      <textarea id="contentInput" rows="10" placeholder="Page Content (Markdown supported)"></textarea>
+      <div id="preview" class="hidden"></div>
+      <button id="previewBtn"><i class="fas fa-eye"></i> Toggle Preview</button>
+      <input id="authorInput" placeholder="Author Name">
+      <div class="editor-actions">
+        <button id="saveBtn"><i class="fas fa-save"></i> Save</button>
+        <button id="cancelBtn"><i class="fas fa-times"></i> Cancel</button>
+      </div>
+    </div>
+    <div id="pageList">
+      <h3>All Pages</h3>
+      <ul id="pageListItems"></ul>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
